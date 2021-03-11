@@ -1,0 +1,438 @@
+
+@media only screen and (min-width: 513px) and (max-width: 768px){
+
+
+.logo img{
+   width: 17.5vw; 
+   height:7.5vw;
+   display: grid;
+  }
+
+
+.links a{
+	text-decoration:none;
+	color: black;
+	font-size: 1.75vw;
+}
+
+
+h1{
+	font-size: 2.75vw;
+}
+
+h2{
+	font-size: 2.75vw;
+}
+
+h3{
+	font-size: 2vw;
+	font-weight: bold;
+}
+
+h4{
+	font-size: 1.75vw;
+	font-weight: bold;
+}
+
+p{
+	font-size: 1.6vw;
+	font-weight: normal;
+}
+
+.logo img{
+	width: 19vw;
+	height: 9vw;
+}
+
+.links a{
+	font-size: 2.25vw;
+}
+
+.intro p{
+	font-size: 1.9vw;
+}
+
+.t-résultats .titre{
+	align-self: center;
+	margin-left: 0vw;
+}
+
+.t-afficher .titre{
+	align-self: center;
+	margin-left:0vw ;
+}
+
+.t-populaires i{
+	align-self: center;
+	margin-left: 52.5vw;
+	font-size: 2.7vw;
+}
+
+.boitederecherche{
+	padding-top: 1vw;
+	width: 90vw;
+	margin: auto;
+	margin-top: 1vw;
+	margin-bottom: 2vw;
+	display: flex;
+}
+
+.icon-Position{
+	height: 4.5vw;
+    width: 6vw;
+    font-size: 3vw;
+}
+
+.icon-Position i{
+	width: 4vw;
+	padding-left: 1vw;
+}
+
+input{
+	width: 30vw;
+	height: 4.5vw;
+	font-size: 2vw;
+	font-weight: bold;
+	border: 0.15vw solid #F2F2F2;
+}
+
+.bouton a {
+	display:block;
+	width:12vw;
+	line-height:4.5vw;
+	text-align:center;
+	background-color:#0065FC;
+	color:white;
+	text-decoration:none;
+	border-top-right-radius: 1vw;
+	border-bottom-right-radius: 1vw;
+}
+
+.bouton a:hover {
+ background-color: #318ce7;
+}
+
+.bouton a:active{
+	padding: -0.1vw 0vw 0.1vw 0vw;
+	border-bottom: 0.3vw solid #F2F2F2 ;
+	border-top: 0.3vw solid #F2F2F2 ;
+	border-right: 0.3vw solid #F2F2F2 ;
+	line-height: 4.2vw;
+	background-color: #c0c0c0;
+}
+
+.filtres{
+	padding-top: 2.5vw;
+	padding-right: 0vw;
+}
+
+.filtres a{
+	display: flex;
+	border: 0.15vw solid #F2F2F2; 
+	padding: 0vw 1vw 0vw 0vw;
+	height: 4vw;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50vw;
+	font-size: 2.5vw;
+}
+
+.filtres a:hover{
+	font-size: 2.5vw;
+}
+
+.filtres i{
+	color: #0065FC;
+	display: flex;
+    border: 0.15vw solid #F2F2F2;
+    border-radius: 50vw;
+    height: 4vw;
+    width: 4vw;
+    align-items: center;
+    justify-content:center;
+    margin-right: 0.5vw;
+    background-color: #DEEBFF;
+}
+
+.item-f{
+	display: flex;
+	height: 3vw;
+	align-items: center;
+	justify-content: center;
+}
+
+#nombrehébergement i{
+	display: flex;
+    border: 0.15vw solid #F2F2F2;
+    border-radius: 50vw;
+    height: 3vw;
+    width: 3vw;
+    align-items: center;
+    justify-content:center;
+    margin-right: 0.9vw;
+    color: #0065FC;
+ }
+
+#hébergements{
+	display: grid;
+	grid-template-columns: 90vw;
+	grid-template-rows: /*32vw*/ 88.1vw 90.11vw ;
+	grid-row-gap: 2.65vw;
+	margin-bottom: 2.65vw;
+}
+
+.boite-hébergements{
+	display: grid;
+	grid-column: 1/2;
+	grid-row: 2/3;
+	grid-template-columns:90vw;
+	grid-template-rows: 6.02vw 77.01vw 7.08vw;
+	border-radius: 1vw;
+	box-shadow: 0.5vw 0.5vw 0.5vw black;
+}
+
+.r-conteneur a{
+	border: 0.55vw solid white;
+	border-radius: 1.55vw;
+}
+
+.r-conteneur img{
+	border-top-left-radius: 1.55vw;
+	border-top-right-radius: 1.55vw;
+}
+
+.titre-boites{
+	align-self: center;
+	margin-left:2.65vw;
+}
+
+.t-afficher{
+	grid-column: 1/5;
+}
+
+.r-conteneur{
+	grid-column: 1/5;
+	align-self: center;
+	justify-content: center;
+	display: grid;
+	grid-template-columns: repeat(2, 41.13vw);
+	grid-template-rows: repeat(3, 23.77vw);
+	grid-column-gap: 2.65vw  ;
+	grid-row-gap: 2.65vw;
+}
+
+.hotel{
+	padding-top: 0.5vw;
+	padding-bottom: 0vw;
+	font-size: 2.3vw;
+
+}
+.tarif{
+	font-size: 2.2vw;
+	padding-top: 0.75vw;
+}
+
+.rating{
+	font-size: 2.2vw;
+	margin-left: 26vw;
+	margin-top: -2.75vw;
+}
+
+.caption{      
+  width: 99%;  
+  height:0;
+  padding-bottom: 7vw;
+  overflow: hidden;
+  text-align: bottom;
+  justify-content: left ;
+  transform: translate(0vw,0vw);
+  background-color: rgba(255,255,255, 0.4);
+}
+
+aside{
+	display: grid;
+	grid-column:1/2;
+	grid-row: 1/2;
+	grid-template-columns: 90vw;
+	grid-template-rows: 6.02vw 76.77vw ;
+	border-radius: 1vw;
+	box-shadow: 0.5vw 0.5vw 0.5vw black;
+}
+
+.t-populaires{
+	grid-row: 1/2;
+	grid-column: 1/3;
+}
+
+.a-conteneur h4{
+	font-size: 2.45vw;
+}
+
+.a-conteneur p{
+	font-size: 2.45vw; 
+}
+
+.a-conteneur i{
+	font-size: 2.45vw; 
+}
+
+.a-conteneur a{
+	border: 0.55vw solid white;
+	border-radius:1.55vw;
+}
+
+.a-conteneur{
+	display: grid;
+	justify-content: center;
+	display: grid;
+	grid-template-columns:84.7vw;
+	grid-template-rows: 25vw 25vw 25vw;
+	grid-row-gap: 1.77vw;
+	grid-column-gap: 1.77vw;
+}
+
+.a-conteneur img{
+  border-top-right-radius:1.55vw;
+  border-bottom-right-radius:1.55vw;
+  width: 100%;
+  line-height: 24.7vw;
+  padding-left:30vw;
+}
+
+.caption-a{
+  width:30%;  
+  height:23.75vw;
+  padding-left: 1vw;
+  padding-bottom: 17vw;
+  overflow: hidden;
+  transform: translate(0vw,-25vw);
+}
+
+.hotel-a{
+	padding-top: 2vw;
+	padding-bottom:0vw;
+	font-size: 2.5vw;
+}
+
+.tarif-a{
+	padding-top: 2vw;
+	font-size: 2.5vw;
+}
+
+.rating-a{
+	font-size: 2.5vw;
+	margin-left: 1vw;
+	margin-top: 3.5vw;
+}
+
+#activités{
+	padding-top:1vw;
+	width: 90vw;
+	height:auto;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(2, 43.67vw);
+	grid-template-rows: 2.48vw 29.42vw 11.68vw 27vw 29.42vw;
+	grid-column-gap: 2.65vw;
+	grid-row-gap: 2.21vw;
+}
+
+#activités a{
+	border-radius: 1vw;
+}
+
+#activités a:hover{
+	color: #318ce7;
+	box-shadow: 0.5vw 0.5vw 0.5vw #318ce7; 
+}
+
+.item-ac-t{
+	grid-column: 1/3;
+	grid-row: 1/2;
+}
+
+.item-ac-t h1{
+	font-size: 2.7vw;
+}
+
+.item-ac1 {
+	grid-column: 1/2;
+	grid-row: 2/4;
+}
+
+.item-ac2 {
+	grid-column: 2/3;
+	grid-row: 2/3;
+}
+
+.item-ac3 {
+	grid-column: 1/2;
+	grid-row: 4/5;
+}
+
+.item-ac4 {
+	grid-column: 2/3;
+	grid-row: 3/5;
+}
+
+.item-ac5 {
+	grid-column: 1/2;
+	grid-row: 5/6;
+}
+
+.item-ac6 {
+	grid-column: 2/3;
+	grid-row: 5/6;
+}
+
+#activités img{
+	width: 100%;
+	border-top-left-radius: 1vw;
+	border-top-right-radius:1vw ;
+}
+
+.vignette-g-ac1{
+	height: 38.1vw;
+}
+
+.vignette-g-ac2{
+	height: 24.21vw;
+}
+
+.vignette-g-ac3{
+	height: 21.79vw;
+}
+
+.vignette-g-ac4{
+	height: 35.68vw;
+}
+
+.vignette-g-ac5{
+	height: 24.21vw;
+}
+
+.vignette-g-ac6{
+	height: 24.21vw;
+}
+
+.caption-ac{  
+  
+  border-radius:0vw;
+  border-bottom-left-radius:1vw;
+  border-bottom-right-radius:1vw; 
+  width:99%;  
+  line-height:4vw;
+  padding-left:1vw;
+  transform: translate(0%,0vw);
+  background-color: rgba(255,255,255, 1);
+}
+
+footer{
+	height:15.75vw;
+
+}
+
+
+}
+
+

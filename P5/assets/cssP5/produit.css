@@ -1,0 +1,165 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: 750px 400px;
+    margin-left: -0px;
+}
+/* .grid-item{
+    border: 0.1vw rebeccapurple solid;
+} */
+.descriptionProduit h3{
+    width: 250px;
+}
+.descriptionText{
+    width: 300px;
+    margin-top: 0px;
+    font-size: large; 
+    margin-bottom: 75px;       
+}
+.imageProduit{
+    width: 750px;
+    height: 486.3px;
+    margin-left: -9px;
+}
+.dropdown{
+    width: 183px;
+    height: auto; 
+    font-size:larger;
+}
+
+
+.dropdown-toggle{
+    margin-top: -125px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    width: auto;
+}
+.priceText {
+    width: 175px;
+    margin-left: 215px;
+    margin-top: -45px;
+    font-size: xx-large;
+}
+
+.oursonsProduitContainer{
+    margin-top: 5px;
+    margin-bottom: 25px;
+    margin-left: -25px;
+}
+.addToCartBtn{
+    width: 150px;
+    margin-top: 0px;
+    margin-left: 195px;
+   
+}
+
+.descriptionText{
+    width: 350px;
+    margin-top: 0px;
+    font-size: larger;        
+}
+
+@media screen and (max-width: 1199px) {
+
+    .dropdown-toggle{
+        margin-left: 155px;
+        margin-bottom: 0px;
+    }
+    .priceText{
+        margin-left: 19px;
+        margin-top: -45px;
+        font-size: xx-large;
+    }
+    .descriptionProduit{
+        margin-top: -20px;
+    }
+    .descriptionProduit h3{
+      width: 250px;
+    }
+    .imageProduit{
+        width: 550px;
+        height: 356.5px;
+        margin-left: -9px;
+    }
+    .grid-container{
+        display: grid;
+        grid-template-columns: 550px 400px;
+        grid-template-rows: 400px;
+        margin-left: -0px;
+      
+    }
+   
+    .addToCartBtn{
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    .descriptionText{
+
+
+        width: 300px;
+        margin-top: -15px;
+        font-size: large;        
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .dropdown{
+        width: 200px;
+        height: auto; 
+        font-size: large;
+    }
+
+    .dropdown-toggle{
+        width: 200px;
+        height: auto;
+        margin-left: 460px;
+        margin-top: -1400px;
+        font-size: medium;
+    }
+    .nomProduit{
+        margin-left: 7px;
+    }
+
+    /* .img-fluid {
+        max-width: 950px;
+    } */
+    
+    .oursonsProduitContainer{
+      
+        margin-left: 0px;
+    }
+    .imageProduit{
+        width: 675px;
+        height: 437.7px;
+        margin-left: -3px;
+    }
+    .descriptionProduit{
+        margin-left: 0px;
+        margin-top: 0px;
+        font-size: x-large;        
+    }
+    .grid-container{
+        display: grid;
+        grid-template-columns: 695px;
+        grid-template-rows: 450px 275px;
+        margin-left: 0px;
+    }
+
+    .priceText{
+        width: 350px;
+        margin-left: 450px;
+        margin-top: -242.5px;
+        
+    }
+    .priceTextStrong{
+        font-size: xx-large;
+    }
+    .addToCartBtn{
+        margin-left: 400px;
+        margin-top: 25px;
+        width: 250px;
+        height: auto;
+        font-size: x-large;
+
+    }
+
+}

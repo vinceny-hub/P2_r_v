@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>www.reservia.com</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/full-desktop.css">
+	<link rel="stylesheet" href="./css/intermediate-desktop.css">
+	<link rel="stylesheet" href="./css/mobile.css">
+	<link rel="stylesheet" href="./css/tablette.css">
+	<link rel="stylesheet" href="./fontawesome-free/css/all.css">
+	<!-- <link rel="icon" type="image/png" href="./assets/img/bear1.ico">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="./assets/css/index.css"> -->
+</head>
+<body>
+		<header>
+		    <div class="logo">
+		        <a href="#"><img src="./img/logo/Reservia@3x.png" alt="logo Reservia"></a>
+		    </div>
+		        <nav class="links">
+		            <a class="h-a" href="#nombrehébergement">Hébergements</a>
+		            <a class="a-a" href="#activités">Activités</a>
+		            <a class ="i-a" href="#">S'inscrire</a>
+		        </nav>
+		</header>
+		<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+			<div class="container">
+				<a class="navbar-brand" href="#"><img class="img-fluid img-thumbnail" style="width:10vw" src="./assets/img/grosoursLogo.jpg" alt=""></a>
+				<h1 class="my-4 text-white"><strong>Teddies </strong><small>les petits oursons</small></h1>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+				<div class="collapse navbar-collapse " id="navbarResponsive">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link cart" href="panier.html">Panier <span> </span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+ 	</header> -->
+	
+		<!-- Fin de l'entête du site -->
+			
+		<!-- Titre du site -->
+				<div class="intro">
+						<h1>Touvez votre hébergement pour des vacances de rêve</h1>
+						<p>En plein centre ville ou en pleine nature</p>
+				</div>
+		<!-- Fin de titre du site -->
+	
+		<!-- ici la boite de recherche de lieux sur le site -->
+				<div class="boitederecherche">
+					<div class="icon-Position"><i class="fas fa-map-marker-alt"></i>
+						</div>
+						<p><input class="text" type="text" name="ville" id="ville" placeholder="Ex : Marseille, France" size="21.5vw" maxlength="26" /></p>
+					<div class="bouton">
+						<h3><a id="Rechercher" href="#">Rechercher</a></h3>
+						<a href="#" id="bouton2"><i class="fas fa-search"></i></a>
+					</div>
+				</div>
+		<!-- fin de la boite de recherche -->
+		
+		<!-- section Filtres -->
+			<section class="filtres">
+					<div class="item-f">
+						<h3>Filtres</h3>
+					</div>
+	
+					<a href="#" class="item-f1">
+						<div>
+							<i class="fas fa-money-bill-wave-alt"></i>
+						</div>
+	
+						<h3>Économique</h3>
+					</a>
+											 
+					<a href="#" class="item-f2"> 
+							<div>
+								<i class="fas fa-child"></i>
+							</div>
+	
+							<h3>Familial</h3>
+					</a>  
+	
+					<a href="#" class="item-f3">    	
+						<div><i class="fas fa-heart"></i>
+						</div>
+	
+						<h3>Romantique</h3>
+					</a>  
+	
+					<a href="#" class="item-f4">    	
+						<div><i class="fas fa-dog"></i>
+						</div>
+	
+						<h3>Animaux autorisés</h3>
+					</a>  
+			</section>
+	
+		<!-- fin de section filtres -->
+	
+		<!-- nombre de résultas de la recherche --> 
+					<div id="nombrehébergement">
+						<div class="fa">
+							<i class="fas fa-info"></i>
+						</div>
+	
+						<div class="info">
+							<p>Plus de 500 logements sont disponibles dans cette ville</p>
+						</div>
+					</div>
+		<!-- fin nombre de résultas de la recherche --> 
+	
+						 
+		<!-- section hébergements -->
+			<main id="hébergements">
+	
+					<div class="boite-hébergements">
+		<!-- Titres résultats hébergements à Marseille, et afficher plus -->
+						<div class="t-résultats">
+							<div class="titre-boites">
+								<h2 class="titre">Hébergements à Marseille</h2>
+							</div>
+						</div>
+						<div class="t-afficher">
+							<a href="#" class="titre-boites">
+								<h3 class="titre">Afficher plus</h3>
+							</a>
+						</div>
+	
+	
+		<!-- Ici les vignettes des différents hôtels de la section hébergements -->	
+		   
+						<div class="r-conteneur" id="conteneurHotel"></div>
+				
+					</div>
+		
+		<!-- aside les plus populaires de la section hébergements -->							
+					<aside>
+		<!-- titre les plus populaires -->
+						<div class="t-populaires">
+							<!--<div class="titre-boites">-->
+								<h2>Les plus populaires</h2>
+							<!--<div class="t1">-->
+									<i class="fas fa-chart-line"></i>
+								<!-- </div>-->
+							</div>
+	
+						
+		<!-- ici les vignettes des différents hôtels les plus populaires -->					
+						<div class="a-conteneur" id="conteneurHotelAs">
+					
+							
+						</div>
+					</aside>
+				</main>
+	
+		<!--section activités -->
+				<section id="activités">	
+		<!-- titre de la section activités -->						
+					<div class="item-ac-t">
+						<h2>Activités à Marseille</h2>
+					</div>
+					
+		<!-- Ici les vignettes des différentes activtés à Marseille -->
+					 <!-- <a href="#" class="item-ac1">
+						 <img class="vignette-g-ac1" src="./img\activites\3_medium\reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Hôtel de la mer" >
+						 <div class="caption-ac">
+							 <h4 class="titre-ac">Vieux port</h4>
+						 </div>
+					 </a>
+	
+					<a href="#" class="item-ac2">
+						<img class="vignette-g-ac2" src=".\img\activites\3_medium\paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Hôtel de la mer" >
+						<div class="caption-ac">
+							<h4 class="titre-ac">Fort de Pomègues</h4>
+						</div>
+					</a>
+	
+					<a href="#" class="item-ac3">
+						<img class="vignette-g-ac3" src="./img\activites\3_medium\kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Hôtel de la mer" >
+						<div class="caption-ac">
+							<h4 class="titre-ac">Îles du Frioul</h4>
+						</div>
+					</a>
+	
+					<a href="#" class="item-ac4">
+						<img class="vignette-g-ac4" src="./img\activites\3_medium\kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Hôtel de la mer" >
+						<div class="caption-ac">
+							<h4 class="titre-ac">Parc National des Calanques</h4>
+						</div>
+					</a>
+	
+					<a href="#" class="item-ac5">
+						<img class="vignette-g-ac5" src="./img\activites\3_medium\florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Hôtel de la mer" >
+						<div class="caption-ac">
+							<h4 class="titre-ac">Notre-Dame-de-la-Garde</h4>
+						</div>
+					</a>
+	
+					<a href="#" class="item-ac6">
+						<img class="vignette-g-ac6" src="./img\activites\3_medium\lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Hôtel de la mer" >
+						<div class="caption-ac">
+							<h4 class="titre-ac">Parc Longchamp</h4>
+						</div>
+					</a> -->
+						
+				</section>
+		<!-- Footer et ses éléments -->
+				<footer>
+					<nav>
+		<!-- navigation à propos -->
+						<ul>
+							 <li class="àpropos"><h4>À propos</h4></li>
+							 <li><p><a href="#"> Fonctionnement du site</a></p></li>
+							 <li><p><a href="#"> Conditions générales de vente</a></p></li>
+							 <li><p><a href="#"> Données et confidentialité</a></p></li>
+						</ul>
+		<!-- navigation nos hébergements -->
+						<ul>
+							 <li class="àpropos"><h4>Nos hébergements<h4></li>
+							 <li><p><a href="#"> Charte qualité </a></p></li>
+							 <li><p><a href="#"> Soumettre votre hôtel</a></p></li>
+						</ul>
+		<!-- navigation assistance -->
+						<ul>
+							<li class="àpropos"><h4>Assistance<h4></li>
+							<li><p><a href="#"> Centre d'aide</a></p></li>
+							<li><p><a href="#"> Nous contacter</a></p></li>
+						</ul>
+					</nav>
+				   </footer>
+				   <script src="./assets/js/index.js"></script>
+				   <!-- <script src="./assets/js/compteurPanier.js"></script>
+				    -->
+		</body>
+	</html>
+
+ 
+  
+ 

@@ -1,0 +1,604 @@
+* {
+	box-sizing:border-box;
+	margin:0;
+	padding:0;
+  
+}
+
+body{
+	width:100%;
+	height:auto;
+	font-family:'Raleway_400';
+}
+/*Police du site*/
+@font-face {
+    font-family: 'Raleway_400';
+    src: url('./font/Raleway_400.ttf');
+}
+/*tailles polices*/
+h1{
+	font-size: 1.5vw;
+}
+
+h2{
+	font-size: 1.5vw;
+	
+}
+
+h3{
+	font-size: 1.2vw;
+	font-weight: bold;
+}
+
+h4{
+	font-size: 1vw;
+	font-weight: bold;
+}
+
+p{
+	font-size: 1vw;
+	font-weight: normal;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+/*entête*/
+header{
+	width: 90vw;
+	margin:auto;
+	display: grid;
+	grid-auto-flow: column;
+}
+/*contenenant des liens de l'entête*/
+.links{
+	display: grid;
+	grid-auto-flow: column;
+	justify-content: end;
+	grid-gap: 3vw;
+	padding-top: 0.25vw;
+	text-decoration:none;
+	color: black;
+	font-size: 1vw;
+}
+/*Liens de l'entête*/
+.links a{
+	padding: 0vw 1.25vw 0vw 1.25vw;
+	padding-top: 1vw;
+	border:0.2vw solid white;
+	align-items: center;
+	transition: all 0.3s ease 0s;
+	}
+/*passage de la souris des liens de l'entête*/
+.links a:hover{
+	color: #0065FC;
+	border-top:0.2vw solid #0065FC;
+}
+/* logo*/
+.logo{
+	display: grid;
+	justify-content: start;
+	align-content: center;
+}
+
+.logo img{
+   width: 12vw; 
+   height:5vw;
+   display: grid;
+   grid-area:logo;	
+}
+
+/* centrage de l'intro */
+.intro{
+	width: 90vw;
+	margin: auto;
+	margin-top:2.5vw;
+	padding-bottom: 1vw;
+	display: grid;
+}
+/*position intro par rapport à l'entête*/
+.intro p{
+	margin-top:0.5vw;
+}
+/*contenant recherche*/
+.boitederecherche{
+	width: 90vw;
+	margin: auto;
+	margin-top: 1vw;
+	margin-bottom: 2vw;
+	display: flex;
+}
+
+.icon-Position{
+	display: flex;
+    border: 0.15vw solid #F2F2F2;
+    border-top-left-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+    height: 3vw;
+    width: 3.1vw;
+    font-size: 2vw;
+    align-items: center;
+    justify-content:center;
+    background-color:  #F2F2F2;
+}
+
+input{
+	height: 3vw;
+	font-size: 1.2vw;
+	font-weight: bold;
+	border: 0.15vw solid #F2F2F2;
+}
+
+.bouton {
+	position: relative;
+}
+
+#Rechercher {
+	position: absolute;
+	z-index: 1;
+}
+/*bouton2 actif en version c'est pourquoi display none*/
+#bouton2 {
+	display: none;
+}
+
+.bouton a {
+	position: relative;
+	display:block;
+	width:10vw;
+	line-height:3vw;
+	text-align:center;
+	background-color:#0065FC;
+	color:white;
+	text-decoration:none;
+	border-top-right-radius: 1vw;
+	border-bottom-right-radius: 1vw;
+	transition: all 0.25s ease 0s;
+
+}
+
+.bouton a:hover {
+ 	background-color: #318ce7;
+}
+
+.bouton a:active{
+	padding: -0.1vw 0vw 0.1vw 0vw;
+	border-bottom: 0.3vw solid #F2F2F2 ;
+	border-top: 0.3vw solid #F2F2F2 ;
+	border-right: 0.3vw solid #F2F2F2 ;
+	line-height: 2.57vw;
+	background-color: #c0c0c0;
+	transition: all 0.25s ease 0s;
+}
+/* la section des filtres*/
+.filtres{
+	width: 90vw;
+	justify-content: space-between;
+	padding-right: 27vw;
+	margin: auto;
+	display:flex;
+	font-weight: bold;
+}
+/*titre Filtres*/
+.item-f{
+	display: flex;
+	height: 3vw;
+	align-items: center;
+	justify-content: center;
+}
+/*liens des filtres*/
+.filtres a{
+	display: flex;
+	border: 0.15vw solid #F2F2F2;
+	border-left: none;
+	padding: 0vw 1vw 0vw 0vw;
+	height: 3vw;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50vw;
+	font-size: 1.45vw;
+	transition: all 0.45s ease 0s;
+}
+/*icones des fitres*/
+.filtres i{
+	color: #0065FC;
+	display: flex;
+    border: 0.15vw solid #F2F2F2;
+    border-radius: 50vw;
+    height: 3vw;
+    width: 3vw;
+    align-items: center;
+    justify-content:center;
+    margin-right: 0.5vw;
+    background-color: #DEEBFF;
+}
+/*passage de la souris sur les filtres*/
+.filtres a:hover{
+	font-size:1.45vw;
+	color: #318ce7;
+	box-shadow: 0.5vw 0.5vw 0.5vw #318ce7; 
+}
+
+/*partie phrase du nombre de logements disponibles dans cette ville*/
+/*positionnement*/
+#nombrehébergement{
+	display: flex;
+	width: 90vw;
+	margin: auto;
+	margin-top: 2vw;
+	margin-bottom: 2vw;
+	align-items: center;
+}
+/*icone*/
+#nombrehébergement i{
+	display: flex;
+    border: 0.15vw solid #F2F2F2;
+    border-radius: 50vw;
+    height: 2vw;
+    width: 2vw;
+    align-items: center;
+    justify-content:center;
+    margin-right: 0.5vw;
+    color: #0065FC;
+ }
+/*recouvrement des imags sur les vignettes*/
+img{
+	object-fit: cover;
+}
+/*section résultat hébergements contenant la boite hébergmement, et l'aside*/
+main{
+	width: 90vw;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 59.36vw 28.0vw  ;
+	grid-column-gap: 2.65vw;
+}
+/*contenant titre hébergements à Marseille, les résutats hôtels, et le sous-titre afficher plus*/
+.boite-hébergements{
+	display: grid;
+	background-color: #F2F2F2;
+	grid-column: 1/2;
+	grid-row:1/2;
+	grid-template-columns: 59.36vw;
+	grid-template-rows: 6.02vw 29.44vw 7.08vw ;
+	border-radius: 1vw;
+	box-shadow: 0.5vw 0.5vw 0.5vw black;
+}
+/*titre résultats hebergements à Marseille*/
+.t-résultats{
+	border-top-left-radius:1vw;
+	border-top-right-radius:1vw;
+	display: grid;
+	background-color: #F2F2F2;
+	grid-column: 1/5;
+	grid-row: 1/2;
+}
+/*posistionnement des titres*/
+.titre{
+	align-self: center;
+	margin-left:2.65vw;
+}
+/*alignement vertival des titres du conteneur hébergements*/
+.titre-boites{
+	align-self: center;
+}
+/*titre afficher plus*/
+.t-afficher{
+	border-bottom-left-radius: 1vw;
+	border-bottom-right-radius: 1vw;
+	display: grid;
+	background-color: #F2F2F2;
+	grid-column: 1/2;
+	grid-row: 3/4;
+}
+
+.t-afficher a:hover{
+	transition: all 0.2s ease 0s;
+	color: #318ce7;
+}
+/* contenant des vignettes des hôtels hébergements à Marseille*/
+.r-conteneur{		
+	background-color: #F2F2F2;
+	grid-column: 1/2;
+	grid-row: 2/3;
+	align-self: center;
+	justify-content: center;
+	display: grid;
+	grid-template-columns: repeat(3, 16.65vw);
+	grid-template-rows: 13.73vw 13.73vw;
+	grid-column-gap: 1.99vw  ;
+	grid-row-gap: 1.99vw;
+}
+
+.r-conteneur a:hover{
+	color: grey;
+	transition: all 0.2s ease 0s;
+	
+	box-shadow: 0.35vw 0.35vw 0.35vw #318ce7;
+}
+
+.r-conteneur a:hover i{
+	color:#318ce7;
+	transition: all 0.2s ease 0s;
+}
+
+.r-conteneur a{
+	background-color: white;
+	border:0.3vw solid white;
+	border-radius: 1vw;
+	box-shadow:0.5vw 0.5vw 0.5vw black;
+	transition: all 0.45s ease 0s;
+	z-index: 1;
+}
+.r-conteneur img{
+    width:100%;
+    height:65%;
+    border-top-left-radius:0.85vw;
+    border-top-right-radius:0.85vw ;
+}
+/*encart txte sous les vignettes hébergments à Marseille*/
+.caption {    
+    display: grid;
+    width: 100%;  
+    height:0;
+    padding-left: 0.5vw;
+    padding-bottom: 27%;
+    overflow: hidden;
+    text-align: bottom;
+    border-radius: 1vw;
+    justify-content: left ;
+    transform: translate(0%,0%);
+    background-color: rgba(255,255,255, 0.4);
+}
+/*nom hôtel*/
+.hotel{
+	padding-top: 0.1vw;
+	padding-bottom: 0.2vw;
+}
+/*tarif*/
+.tarif{
+	padding-bottom: 0.2vw;
+}
+/*note, nombre d'étoiles*/
+.rating {
+	display:flex;
+	color: #0065FC;
+	font-size: 1vw;
+	padding-top: 0.1vw;
+}
+/*contenant Aside les plus populaires*/
+aside{
+	display: grid;
+	background-color: #F2F2F2;
+	grid-column: 2/3;
+	grid-row:1/2;
+	grid-template-columns: 28.0vw;
+	grid-template-rows: 6.02vw 36.52vw ;
+	border-radius: 1vw;
+	box-shadow: 0.5vw 0.5vw 0.5vw black;
+}
+/* titre les plus populaires*/
+.t-populaires{
+	border-top-left-radius:1vw;
+	border-top-right-radius:1vw;
+	line-height: 6.02vw;
+	display: grid;
+	grid-auto-flow: column;
+	margin-left: 2.65vw;
+	background-color: #F2F2F2;
+	grid-column:1/2;
+	grid-row: 1/2;
+}
+/*icone les plus populaires*/
+.t-populaires i{
+	position: relative;
+	margin-left:4.25vw;
+	line-height: 6.2vw;
+	font-size: 1.75vw;
+}
+/*contenant des vignettes hotel les plus populaires*/
+.a-conteneur{
+	display: grid;
+	padding-top: 0.25vw;
+	justify-content: center;
+	grid-template-columns:22.7vw;
+	grid-template-rows: 9.96vw 9.96vw 9.96vw;
+	grid-row-gap: 2.21vw;
+	border-bottom-left-radius: 1vw;
+	border-bottom-right-radius: 1vw;
+	background-color: #F2F2F2;
+	grid-column: 1/2;
+	grid-row: 2/3;
+}
+
+.a-conteneur a:hover{
+	color: grey;
+	box-shadow: 0.35vw 0.35vw 0.35vw #318ce7;
+}
+
+.a-conteneur a:hover i{
+	color:#318ce7;
+	transition: all 0.2s ease 0s;
+}
+/* déclaration des différents contenus de la grille des résultats : 
+    titre Hébergements, titre populaire, Résultats, aside populaire et titre afficher plus. */
+/* les boites de l'aside */
+.a-conteneur a{		
+	width: 100%;
+	border: 0.3vw solid white;
+	background-color: white;
+	border-radius: 1vw;
+	box-shadow: 0.5vw 0.5vw 0.5vw black;
+	transition: all 0.45s ease 0s;
+}
+
+.a-conteneur img{
+	width:8.86vw;
+	height: 100%;
+	border-top-left-radius:0.85vw;
+	border-bottom-left-radius:0.85vw;
+}
+/*encart texte des vignettes populaires*/
+.caption-a {
+    border-radius:0.5vw;
+    width:10vw;  
+    height:100%;
+    padding-bottom:24.5%;
+    overflow: hidden;
+    padding-top:0.15vw;
+    justify-content:left;
+    transform: translate(100%,-103.5%);
+    background-color: rgba(255,255,255, 0.4);
+}
+/*nom hotel popilaires*/
+.hotel-a{
+	padding-bottom: 0.75vw;
+}
+/*tarif des hotels populaires*/
+.tarif-a{
+	padding-bottom: 3.25vw;
+}
+/*note, etoiles des populaires*/
+.rating-a{
+	display:flex;
+	color: #0065FC;
+	font-size: 1vw;
+	padding-top: 0.1vw;
+}
+/* Ici section activités*/
+#activités{
+	padding-top: 2.65vw;
+	width: 90vw;
+	height: auto;
+	margin: auto;
+    display: grid;
+	grid-template-columns: repeat(4, 20.51vw);
+	grid-template-rows: 3.98vw 13.73vw 2.65vw 2.65vw 11.5vw;
+	grid-column-gap: 2.65vw;
+}
+
+#activités a{
+	border-radius: 1vw;
+	box-shadow: 0.5vw 0.5vw 0.5vw black;
+	transition: all 0.45s ease 0s;
+}
+
+#activités a h4{
+	transition: all 0.45s ease 0s;
+}
+
+#activités a:hover{
+	color: #318ce7;
+	box-shadow: 0.5vw 0.5vw 0.5vw #318ce7; 
+}
+/*positionnement des différents items*/
+.item-ac-t{
+	align-content: center;
+	grid-column: 1/5;
+	grid-row: 1/2;
+}
+
+.item-ac1 {
+	grid-column: 1/2;
+	grid-row: 2/6;
+}
+
+.item-ac2 {
+	grid-column: 2/3;
+	grid-row: 2/4;
+}
+
+.item-ac3 {
+	grid-column: 2/3;
+	grid-row: 5/6;
+}
+
+.item-ac4 {
+	grid-column: 3/4;
+	grid-row: 2/6;
+	
+}
+
+.item-ac5 {
+	grid-column: 4/5;
+	grid-row: 2/3;
+}
+
+.item-ac6 {
+	grid-column: 4/5;
+	grid-row: 4/6;
+}
+/*images activités à Marseille*/
+#activités img{
+	width: 100%;
+	border-top-left-radius: 1vw;
+    border-top-right-radius:1vw ;
+}
+/*taille des images activités à Marseille*/
+.vignette-g-ac1{
+    height: 26.54vw;
+}
+
+.vignette-g-ac2{
+    height: 12.4vw;
+}
+
+.vignette-g-ac3{
+    height: 7.52vw;
+}
+
+.vignette-g-ac4{
+    height: 26.54vw;
+}
+
+.vignette-g-ac5{
+    height: 9.75vw;
+}
+
+.vignette-g-ac6{
+    height: 10.17vw;
+}
+/*texte sous les imags activités à Marseille*/
+.caption-ac{  
+	border-radius:1vw;  
+	width:100%;  
+	height:3.5vw;
+	line-height: 3.5vw;
+	padding-left: 1vw;
+	overflow: hidden;
+	justify-content: left ;
+	background-color: rgba(255,255,255, 0.4);
+}
+/*Footer*/
+footer{
+	margin:auto; 
+	margin-top: 2.65vw;
+	height:10vw;
+	display: flex;
+   	background-color: #F2F2F2;
+}
+/*liste footer*/
+footer li{
+	padding-right: 10.5vw;
+	margin-left: 5vw;
+	list-style-type: none;
+	padding-bottom: 0.75vw;
+}
+/*navigation footer*/
+footer nav{
+	display: flex;
+}
+
+footer ul{
+	padding-top:1.25vw;
+}
+/*lien footer*/
+footer a{
+	color: black;
+	text-decoration:none;
+}
+/*passage de la souris sur les liens footer*/
+footer nav a:hover{
+	color: #0065FC;
+}

@@ -1,0 +1,89 @@
+.prenomText{
+    margin-top: 25px;
+}
+
+
+li{
+ list-style: none;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 300px 500px;
+}
+.vignette{
+    width: 150px;
+    height: 100px;
+    margin-left:-40px;
+}
+
+.product-name{
+    margin-left: 50px;
+    padding-top: 50px;
+    font-size: larger;
+}
+.buttonClose{
+    margin-left: 450px;
+    margin-top: -75px;
+}
+.buttonCloseTop{
+    margin-top: -95px;
+}
+
+@media screen and (max-width: 1199px) {
+.product-name{
+    width: 225px;
+    margin-left: 50px;
+    font-size: larger;
+   
+}
+.buttonClose{
+    margin-left: 350px;
+    margin-top:  -75px;
+    
+}
+.buttonCloseTop{
+    margin-top: -95px;
+}
+
+}
+
+@media screen and (max-width: 991px) {
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 550px;
+    grid-template-rows: 25px 25px;
+}
+
+.item{
+  
+    padding: 0px;
+}
+.vignette{
+    width: 120px;
+    height: 80px;
+    margin-left: -25px;
+   
+}
+.product-name{
+    width: 225px;
+    margin-left: 35px;
+    padding-top: 35px;
+    font-size: larger;
+}
+
+.orderIdText{
+    margin-bottom: 30px;
+}
+.recapitulatifText{
+    padding-top: 15px;
+}
+.buttonClose{
+    margin-left: -5px;
+    margin-top:  10px;
+    margin-bottom: 25px;
+    
+}
+
+}
