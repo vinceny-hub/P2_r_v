@@ -2,69 +2,116 @@
 // ************************page description*******************************************************
 // recupération des données du serveur
     fetch ('http://localhost:3000/api/hotels')
+    
     .then((response) => response.json())
     .then((data) => {
 // récupération de l'_id sur l'URL de la page
       var search_params = new URLSearchParams(window.location.search); 
-      let oursID = search_params.get('id');
-      var search_params = new URLSearchParams(window.location.search);
-        if(search_params.has('id')) {
-        var id = search_params.getAll('id');
-        // console.log(id)
-        }
-// oursID id de l'ourson sélectionné, déclaration de galOurs = données de l'ourson selectionné
+      let productId = search_params.get('id');
+      // var search_params = new URLSearchParams(window.location.search);
+      //   if(search_params.has('id')) {
+      //   var id = search_params.get('id');
+      //   console.log(productId)
+      //   }
+// productId id du produit sélectionné, déclaration de product = données du poduit selectionné
         for (var i = 0; i < 1; i++){
-        let galOurs = data.find(nId => {
-        return nId._id === oursID            
+        let  product = data.find(nId => {
+        return nId._id === productId          
         })
-        // console.log(galOurs)
+        // console.log(product)
 // stringify / parse 
-        let dataStr = JSON.stringify(data)
-        data = JSON.parse(dataStr)
-        let galOursStr =JSON.stringify(galOurs)
-        galOursParse = JSON.parse(galOursStr)
-        // console.log(galOursParse)
+        // let dataStr = JSON.stringify(data)
+        // data = JSON.parse(dataStr)
+           let productStr =JSON.stringify(product)
+        // productParse = JSON.parse(productStr)
+        // console.log(productParse)
       
 //  liste des couleurs
-        // liColors = galOurs.colors.length;
+        // liColors = product.colors.length;
         // text = "<div class='dropdown'>";
         // for (i = 0; i < liColors; i++) {
-        // text += "<a class='dropdown-item' href='#'>" + galOurs.colors[i] + "</a>";
+        // text += "<a class='dropdown-item' href='#'>" + product.colors[i] + "</a>";
         // }
         // text += "</div>";
 // insertion page produit
-        const oursonUnique = document.getElementById('oursonsProduit')
-        oursonUnique.innerHTML = 
+        const productUnique = document.getElementById('productUnique')
+        productUnique.innerHTML = 
         `
-        <div class="container">
-        <h1 class="my-2"><small></small><strong class="nomProduit" font-weight-bold>${galOurs.name}</strong></h1>
-          <div class="grid-container">
-            <div class="grid-item">
-              <div class="row imageProduit">
-                <div class="col-md-8 ">
-                  <img class="imageProduit" src=${galOurs.imageUrl} alt="">
-                </div>
-              </div>
+     
+	
+	
+       
+           
+        <div class="r-conteneurProduct">
+          <img class="item" src=${product.imageUrl} alt="Hôtel de la mer">
+          <div class="captionProduct cap">
+           <h2 class="hotel">${product.name}</h2>
+            <p class="tarif">Nuit à partir de ${product.price}€</p>
+             <div class="rating">
+              <i class="fas fa-star" id="rating"></i>
+              <i class="fas fa-star" id="rating"></i>
+              <i class="fas fa-star" id="rating"></i>
+              <i class="fas fa-star" id="rating"></i>
+              <i class="fas fa-star" id="rating"></i>
+             </div>
             </div>
-            <div class="grid-item">
-              <div class="col-md-4 descriptionProduit">
-                <h3 class="my-3">Description de l'ourson</h3>
-                <p class="font-italic font-weight-bold descriptionText">${galOurs.description}</p>
-                <div class="dropdown">
+       
+
+      
+            <div class="caption-2 cap">
+              <div class="">
+                <h3 class="">Description de la chambre</h3>
+                <p class="">${product.description}</p>
+            <!--    <div class="dropdown">
                   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Couleurs disponibles
                   </button><div class="dropdown-menu" aria-labelledby="dropdownMenuButton"></div>
-                </div>
-                <p class="font-italic font-weight-bold priceText"><strong priceTextStrong>₽ ${galOurs.price}</strong></p>
-                <button id="addCart" class="btn btn-info shop-item-button addToCartBtn addToCart">Ajouter au panier</button>
+                </div>-->
+              
+               
               </div>
+            
             </div>
+            <div class="caption-3 cap">
+            <h3>Nombre de nuitées</h3>
+            <input type="number" id="nights" value="0"></input>
+            </div>
+            <button id="addCart" class="caption-4 cap">Réserver</button>
           </div>
-        </div>
+         
+       
        
         `
+        const nightInput = document.querySelector('input');
+        const log = document.getElementById('values');
+        const orderButton = document.querySelector("#addCart")
+        orderButton.disabled = true
+        nightInput.addEventListener('input', updateValue);
+       
+        function updateValue(e) {
+        if(nightInput.value>0){
+          orderButton.disabled = false
+        }else{
+          orderButton.disabled = true
+        }
 
-   
+        }
+
+        // const nightInput = document.querySelector("#nights")
+        // // const nightValues = document.getElementById('nights').value
+        // nightInput.addEventListener(function() {
+        // const orderButton = document.querySelector("#addCart")
+        // if(nightInput.value===0){
+        // orderButton.disabled = true
+
+        // }
+        // })
+       
+        console.log(nightInput)
+        if(nightInput.value = 0){ 
+
+        orderButton.disabled = true
+        }
 // *********************** Init local storage ******************************
 
         if(localStorage.getItem('cartId')){ 
@@ -84,7 +131,7 @@
         function addCart(){ 
           const addToCartButton = document.getElementById('addCart')
           addToCartButton.addEventListener('click', async function() { 
-            OP.push(galOursStr)
+            OP.push(productStr)
             localStorage.setItem('cartId', JSON.stringify(OP))
             alert('Added to Cart')
          
@@ -101,7 +148,7 @@
         }
       // _id(s) ajouté(s) au localStroage
         function addCartId(){ 
-          var varIds = oursID
+          var varIds = productId
           var ids = JSON.parse(localStorage.getItem('ids'))
           const addToCartButton = document.getElementById('addCart')
           addToCartButton.addEventListener('click', async function() { 
@@ -123,8 +170,8 @@
         }
       // prix ajoutés au localStorage
         function addCartPrice(){ 
-          var varPrice = galOurs.price
-          // console.log(galOurs.price)
+          var varPrice = product.price
+          // console.log(product.price)
           var prices = JSON.parse(localStorage.getItem('prices'))
           const addToCartButton = document.getElementById('addCart')
           addToCartButton.addEventListener('click', async function() { 

@@ -11,60 +11,11 @@ fetch ('http://localhost:3000/api/hotels')
     itemH.className = "class='item' href='produit.html?id=${data[i]._id}"
     itemH.setAttribute('href', `produit.html?id=${data[i]._id}`)
     itemH.innerHTML =
-    // = document.getElementById('conteneurHotel')
-    // let products = []
-    // let photoHotel = document.querySelector('.vignette-g');
-    // photoHotel.src= data[i].imageUrl
-    // photoHotel.appendchild(conteneurHotel)
-
-    // photoHotel.innerHTML = `<img src=${data[i].name}>`
-
-
-    // let nomHotel = document.createElement('h4')
-    // let nomHotelTexte = document.createTextNode('djpojosdjgogj')
-    // // let titreHotel = document.querySelector('.hotel');
-    // // titreHotel.innerHTML = `<h4 class="hotel">${data[i].name}</h4>`
-    // nomHotel.appendchild(nomHotelTexte)
-    // titreHotel.innerHTML = `<h4 class="hotel">${data[i].name}</h4>`
-    // let tarifHotel = document.querySelector('.tarif');
-    // tarifHotel.innerHTML = `<p class="hotel">${data[i].price}</p>`
-    // listOfproducts = products.push(data[i])  
-    // document.getElementById('conteneurHotel').appendChild(products) = innerHTML
-    // document.body.appendChild(listOfproducts)
-    // console.log(products)
-
-    // document.getElementById('conteneurHotel')
-    // products.appendChild(Product)  // document.body.insertBefore(photoHotel,conteneurHotel)
-  
-    // titreHotel.appendChild(contenuTitreHotel)
-    // document.body.appendChild(titreHotel)
-
-      // const getOursons = document.getElementById('oursonsList')
-      // getOursons.innerHTML += 
-      //   `
-      //   <div class="col-12 col-md-6 col-lg-4 mb-4">
-      //     <div class="card h-100">
-      //       <a href="produit.html?id=${data[i]._id}"><img src=${data[i].imageUrl} class="card-img-top img-size"></a>
-      //       <div class="card-body">
-      //         <p class="card-title h3 font-weight-bold">
-      //           <a href="produit.html?id=${data[i]._id}">${data[i].name}</a>
-      //         </p>
-      //         <span class="font-weight-bold lead">₽ ${data[i].price}</span>
-      //         <p class="card-text font-italic font-weight-bold">${data[i].description}</p>
-      //       <!--<button class="btn btn-info shop-item-button">Ajouter au panier</button>-->
-      //       </div>
-      //     </div>
-      //   </div>
-      //   `
-        // getOursons.appendChild()
-
-      `
-      
-       
+        `
        <img class="vignette-g" src=${data[i].imageUrl} alt="Hôtel de la mer" >
        <div class="caption">
          <h4 class="hotel">${data[i].name}</h4>
-         <p class="tarif">${data[i].price}</p>
+         <p class="tarif">Nuit à partir de ${data[i].price}€</p>
          <div class="rating">
            <i class="fas fa-star" id="rating"></i>
            <i class="fas fa-star" id="rating"></i>
@@ -73,64 +24,19 @@ fetch ('http://localhost:3000/api/hotels')
            <i class="fas fa-star" id="rating"></i>
         </div>
        </div>
-     
-      
-
-
-
-    
-      
-       
-							 
-						
-   
-			
-            
-        
-					
-				
-			
       `
      
-     
-
-  
   const items = document.getElementById('conteneurHotel')
   items.append(itemH)
 
   }
+})
+
+fetch ('http://localhost:3000/api/activities')
+.then((res) => res.json())
+.then((data) => {
   
-  for (i=0; i<3; i++){ 
-  let itemAs = document.createElement('a')
-  itemAs.className =  "class='item-as'"
-  itemAs.setAttribute('href', `produit.html?id=${data[i]._id}`)
-  itemAs.innerHTML = 
-
-  `
-  
-   
-   <img class="vignette-g-a" src=${data[i].imageUrl} alt="Hôtel de la mer" >
-   <div class="caption-a">
-   <h4 class="hotel">${data[i].name}</h4>
-   <p class="tarif">${data[i].price}</p>
-     <div class="rating-a">
-       <i class="fas fa-star" id="rating"></i>
-       <i class="fas fa-star" id="rating"></i>
-       <i class="fas fa-star" id="rating"></i>
-       <i class="fas fa-star" id="rating"></i>
-       <i class="fas fa-star" id="rating"></i>
-     </div>
-   </div>
-
-          
-    
- 
-  `
-  const itemsAs = document.getElementById('conteneurHotelAs')
-  itemsAs.append(itemAs)
-  }
-
-  for (i=0 ; i < 1 ;i++){ 
+  for (i=0 ; i <1 ;i++){ 
     let itemsAc = []
 
     let itemAc1 = document.createElement('a')
@@ -138,7 +44,7 @@ fetch ('http://localhost:3000/api/hotels')
     itemAc1.setAttribute('href', `produit.html?id=${data[0]._id}`)
 
     let imgAc1 = document.createElement('img')
-    imgAc1.className = "class='vignette-g-ac1'"
+    imgAc1.className = "vignette-g-ac1"
     imgAc1.src = `${data[0].imageUrl}`
 
     let captionAc1 = document.createElement('div')
@@ -158,7 +64,7 @@ fetch ('http://localhost:3000/api/hotels')
     itemAc2.setAttribute('href', `produit.html?id=${data[1]._id}`)
 
     let imgAc2 = document.createElement('img')
-    imgAc2.className = "class='vignette-g-ac1'"
+    imgAc2.className = "vignette-g-ac2"
     imgAc2.src = `${data[1].imageUrl}`
 
     let captionAc2 = document.createElement('div')
@@ -172,9 +78,88 @@ fetch ('http://localhost:3000/api/hotels')
 
     itemAc2.append(imgAc2,captionAc2)
 
+
+
     let itemAc3 = document.createElement('a')
     itemAc3.className=  "item-ac3"
     itemAc3.setAttribute('href', `produit.html?id=${data[2]._id}`)
+
+    let imgAc3 = document.createElement('img')
+    imgAc3.className = "vignette-g-ac3"
+    imgAc3.src = `${data[2].imageUrl}`
+
+    let captionAc3 = document.createElement('div')
+    captionAc3.className = "caption-ac"
+
+    let nameAc3 = document.createElement('h4')
+    nameAc3.className = "titre-ac"
+
+    nameAc3.innerText = `${data[2].name}`
+    captionAc3.append(nameAc3)
+
+    itemAc3.append(imgAc3,captionAc3)
+
+
+
+    let itemAc4 = document.createElement('a')
+    itemAc4.className=  "item-ac4"
+    itemAc4.setAttribute('href', `produit.html?id=${data[3]._id}`)
+
+    let imgAc4 = document.createElement('img')
+    imgAc4.className = "vignette-g-ac4"
+    imgAc4.src = `${data[3].imageUrl}`
+
+    let captionAc4 = document.createElement('div')
+    captionAc4.className = "caption-ac"
+
+    let nameAc4 = document.createElement('h4')
+    nameAc4.className = "titre-ac"
+
+    nameAc4.innerText = `${data[3].name}`
+    captionAc4.append(nameAc4)
+
+    itemAc4.append(imgAc4,captionAc4)
+
+
+
+    let itemAc5 = document.createElement('a')
+    itemAc5.className=  "item-ac5"
+    itemAc5.setAttribute('href', `produit.html?id=${data[4]._id}`)
+
+    let imgAc5 = document.createElement('img')
+    imgAc5.className = "vignette-g-ac5"
+    imgAc5.src = `${data[4].imageUrl}`
+
+    let captionAc5 = document.createElement('div')
+    captionAc5.className = "caption-ac"
+
+    let nameAc5 = document.createElement('h4')
+    nameAc5.className = "titre-ac"
+
+    nameAc5.innerText = `${data[4].name}`
+    captionAc5.append(nameAc5)
+
+    itemAc5.append(imgAc5,captionAc5)
+
+
+    let itemAc6 = document.createElement('a')
+    itemAc6.className=  "item-ac6"
+    itemAc6.setAttribute('href', `produit.html?id=${data[5]._id}`)
+
+    let imgAc6 = document.createElement('img')
+    imgAc6.className = "vignette-g-ac6"
+    imgAc6.src = `${data[5].imageUrl}`
+
+    let captionAc6 = document.createElement('div')
+    captionAc6.className = "caption-ac"
+
+    let nameAc6 = document.createElement('h4')
+    nameAc6.className = "titre-ac"
+
+    nameAc6.innerText = `${data[5].name}`
+    captionAc6.append(nameAc6)
+
+    itemAc6.append(imgAc6,captionAc6)
 
     // let itemAc4 = document.createElement('a')
     // itemAc4.className=  "item-ac4"
@@ -188,74 +173,49 @@ fetch ('http://localhost:3000/api/hotels')
     // item6.className=  "item-ac6"
     // item6.setAttribute('href', `produit.html?id=${data[5]._id}`)
 
-    itemsAc.push(itemAc1,itemAc2,itemAc3)
+    itemsAc.push(itemAc1,itemAc2,itemAc3,itemAc4,itemAc5,itemAc6)
+   
+    const itemAc = document.getElementById('activités')
+    itemAc.append(itemAc1,itemAc2,itemAc3,itemAc4,itemAc5,itemAc6)
+  }
+})
 
+fetch ('http://localhost:3000/api/populaires')
+.then((res) => res.json())
+.then((dataAs) => {
+  console.log(dataAs)
 
-    // item1.innerHTML = 
-        
-		// 			 	//  <img class="vignette-g-ac1" src=${data[0].imageUrl} alt="Hôtel de la mer" >
-    //           ` 
-		// 				 <div class="caption-ac">
-		// 					 <h4 class="titre-ac">${data[0].name}</h4>
-		// 				 </div>
-		// 			 `
-	
-					// <a href="#" class="item-ac2">
-					// 	<img class="vignette-g-ac2" src="${data[i].imageUrl}" alt="Hôtel de la mer" >
-					// 	<div class="caption-ac">
-					// 		<h4 class="titre-ac">Fort de Pomègues</h4>
-					// 	</div>
-					// </a>
-	
-					// <a href="#" class="item-ac3">
-					// 	<img class="vignette-g-ac3" src="src=${data[i].imageUrl}" alt="Hôtel de la mer" >
-					// 	<div class="caption-ac">
-					// 		<h4 class="titre-ac">Îles du Frioul</h4>
-					// 	</div>
-					// </a>`
-	
-		// 			<a href="#" class="item-ac4">
-		// 				<img class="vignette-g-ac4" src="./img\activites\3_medium\kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Hôtel de la mer" >
-		// 				<div class="caption-ac">
-		// 					<h4 class="titre-ac">Parc National des Calanques</h4>
-		// 				</div>
-		// 			</a>
-	
-		// 			<a href="#" class="item-ac5">
-		// 				<img class="vignette-g-ac5" src="./img\activites\3_medium\florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Hôtel de la mer" >
-		// 				<div class="caption-ac">
-		// 					<h4 class="titre-ac">Notre-Dame-de-la-Garde</h4>
-		// 				</div>
-		// 			</a>
-	
-		// 			<a href="#" class="item-ac6">
-		// 				<img class="vignette-g-ac6" src="./img\activites\3_medium\lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Hôtel de la mer" >
-		// 				<div class="caption-ac">
-		// 					<h4 class="titre-ac">Parc Longchamp</h4>
-		// 				</div>
-		// 			</a>
+  for (i=0; i<3; i++){ 
+    let itemAs = document.createElement('a')
+    itemAs.className =  "class='item-as'"
+    itemAs.setAttribute('href', `produit.html?id=${dataAs[i]._id}`)
+    itemAs.innerHTML = 
+  
+    `
     
      
-    //  <img class="vignette-g-a" src=${data[i].imageUrl} alt="Hôtel de la mer" >
-    //  <div class="caption-a">
-    //  <h4 class="hotel">${data[i].name}</h4>
-    //  <p class="tarif">${data[i].price}</p>
-    //    <div class="rating-a">
-    //      <i class="fas fa-star" id="rating"></i>
-    //      <i class="fas fa-star" id="rating"></i>
-    //      <i class="fas fa-star" id="rating"></i>
-    //      <i class="fas fa-star" id="rating"></i>
-    //      <i class="fas fa-star" id="rating"></i>
-    //    </div>
-    //  </div>
+     <img class="vignette-g-a" src=${dataAs[i].imageUrl} alt="Hôtel de la mer">
+     <div class="caption-a">
+     <h4 class="hotel">${dataAs[i].name}</h4>
+     <p class="tarif">Nuit à partir de ${dataAs[i].price}€</p>
+       <div class="rating-a">
+         <i class="fas fa-star" id="rating"></i>
+         <i class="fas fa-star" id="rating"></i>
+         <i class="fas fa-star" id="rating"></i>
+         <i class="fas fa-star" id="rating"></i>
+         <i class="fas fa-star" id="rating"></i>
+       </div>
+     </div>
   
             
       
    
-    const itemAc = document.getElementById('activités')
-    itemAc.append(itemAc1,itemAc2,itemAc3)
-  }
-})
+    `
+    const itemsAs = document.getElementById('conteneurHotelAs')
+    itemsAs.append(itemAs)
+    }
+  })
+
 
 // function createListItem
 

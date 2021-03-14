@@ -4,49 +4,59 @@
 	<title>Orinico teddies description</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./css/full-desktop.css">
+	<link rel="stylesheet" href="./css/fullProduct-desktop.css">
 	<link rel="stylesheet" href="./css/intermediate-desktop.css">
 	<link rel="stylesheet" href="./css/mobile.css">
 	<link rel="stylesheet" href="./css/tablette.css">
 	<link rel="stylesheet" href="./fontawesome-free/css/all.css">
 </head>
 <body>
-	<header>
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-			<div class="container">
-				<a class="navbar-brand" href="#"><img class="img-fluid img-thumbnail" style="width:10vw" src="./assets/img/grosoursLogo.jpg" alt=""></a>
-				<div class="">
-					<h1 class="my-4 text-white"><strong>Teddies </strong><small>les petits oursons</small></h1>
-				</div>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-				<div class="collapse navbar-collapse" id="navbarResponsive">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active">
-							<a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link cart" href="panier.html">Panier <span>  </span></a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Contact</a>
-						</li>
-					</ul>
-		    	</div>
-		  	</div>
-		</nav>
-	</header>
-	<main>
-	<div id="oursonsProduit" class="oursonsProduitContainer"></div>
-	</main>
-	<footer class="bg-light text-center text-lg-start">
-		<!-- Copyright -->
-		<div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-		  © 2020 Copyright:
-		  <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-		</div>
-		<!-- Copyright -->
-	</footer>
 	
+		<header>
+		    <div class="logo">
+		        <a href="index.html"><img src="./img/logo/Reservia@3x.png" alt="logo Reservia"></a>
+		    </div>
+		        <nav class="links">
+		            <a class="h-a" href="#nombrehébergement">Hébergements</a>
+		            <a class="a-a" href="#activités">Activités</a>
+		            <a class ="i-a" href="#">S'inscrire</a>
+		        </nav>
+		</header>
+	<!-- Fin de l'entête du site -->
+		
+	<!-- Titre du site -->
+			<div class="intro">
+					<h1>Touvez votre hébergement pour des vacances de rêve</h1>
+					<p>En plein centre ville ou en pleine nature</p>
+			</div>
+	
+	<main>
+	<div id="productUnique" class="productContainer"></div>
+	</main>
+	<footer>
+		<nav>
+<!-- navigation à propos -->
+			<ul>
+				 <li class="àpropos"><h4>À propos</h4></li>
+				 <li><p><a href="#"> Fonctionnement du site</a></p></li>
+				 <li><p><a href="#"> Conditions générales de vente</a></p></li>
+				 <li><p><a href="#"> Données et confidentialité</a></p></li>
+			</ul>
+<!-- navigation nos hébergements -->
+			<ul>
+				 <li class="àpropos"><h4>Nos hébergements<h4></li>
+				 <li><p><a href="#"> Charte qualité </a></p></li>
+				 <li><p><a href="#"> Soumettre votre hôtel</a></p></li>
+			</ul>
+<!-- navigation assistance -->
+			<ul>
+				<li class="àpropos"><h4>Assistance<h4></li>
+				<li><p><a href="#"> Centre d'aide</a></p></li>
+				<li><p><a href="#"> Nous contacter</a></p></li>
+			</ul>
+		</nav>
+	   </footer>
+	  	
 
 	<script src="./assets/js/produit.js"></script>
 	<script src="./assets/js/compteurPanier.js"></script>

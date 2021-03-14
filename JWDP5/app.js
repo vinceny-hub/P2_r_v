@@ -5,6 +5,8 @@ const path = require('path');
 
 
 const hotelRoutes = require('./routes/hotel');
+const activityRoutes = require('./routes/activity');
+const populaireRoutes = require('./routes/populaire');
 
 
 const app = express();
@@ -33,6 +35,8 @@ app.use(bodyParser.json());
 
 
 app.use('/api/hotels', hotelRoutes);
+app.use('/api/activities', activityRoutes);
+app.use('/api/populaires', populaireRoutes);
 
 
 module.exports = app;
